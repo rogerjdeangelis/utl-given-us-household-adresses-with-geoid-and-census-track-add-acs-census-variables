@@ -980,25 +980,26 @@ Given us household adresses with geoid and census track add acs census variables
 
     */
 
-    procc datasets lib=work; modify want; label
-    10_14="10 to 14 years"
-    15_19="15 to 19 years"
-    20_24="20 to 24 years"
-    25_34="25 to 34 years"
-    35_44="35 to 44 years"
-    45_54="45 to 54 years"
-    55_59="55 to 59 years"
-    5_9="5 to 9 years"
-    60_64="60 to 64 years"
-    65_74="65 to 74 years"
-    75_84="75 to 84 years"
-    iculture="Agriculture, forestry, fishing and hunting, and mining"
-    an1="Asian"
-    an2="Asian (alone or in combination)"
-    ociates="Associates degree"
-    Commute="Mean travel time to work in minutes"
-    FamInc="Mean family income"
-    FamSize="Average family size"
+    
+    proc datasets lib=acssd1; modify tstacs5yr; label
+    Age10_14="10 to 14 years"
+    Age15_19="15 to 19 years"
+    Age20_24="20 to 24 years"
+    Age25_34="25 to 34 years"
+    Age35_44="35 to 44 years"
+    Age45_54="45 to 54 years"
+    Age55_59="55 to 59 years"
+    Age5_9="5 to 9 years"
+    Age60_64="60 to 64 years"
+    Age65_74="65 to 74 years"
+    Age75_84="75 to 84 years"
+    Agriculture="Agriculture, forestry, fishing and hunting, and mining"
+    Asian1="Asian"
+    Asian2="Asian (alone or in combination)"
+    Associates="Associates degree"
+    AvgCommute="Mean travel time to work in minutes"
+    AvgFamInc="Mean family income"
+    AvgFamSize="Average family size"
     AvgGrossRent="Average gross rent"
     AvgHHEarnings="Mean household earnings"
     AvgHHInc="Mean household income"
@@ -1657,6 +1658,7 @@ Given us household adresses with geoid and census track add acs census variables
     pctWomenGivingBirth="Women 15 to 50 years old who had a birth in the past 12 months"
     pctWorkAtHome="Worked at home"
     ;run;quit;
+
 
     /*____            _       _           _
     |___ /   _ __ ___| | __ _| |_ ___  __| |  _ __ ___ _ __   ___  ___
